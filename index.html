@@ -1,22 +1,283 @@
 <!DOCTYPE html>
-<html>
-<body>
-<b>Test</b> 
-<div id="time"></div>
-</body>
-<script type="text/javascript">
-const date = new Date();
-
-const year = date.getFullYear();
-const month = String(date.getMonth() + 1).padStart(2, '0'); // Month is 0-based
-const day = String(date.getUTCDate()).padStart(2, '0');
-
-const hour = String(date.getHours()).padStart(2, '0');
-const minute = String(date.getMinutes()).padStart(2, '0');
-const second = String(date.getSeconds()).padStart(2, '0');
-
-const strDate = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second;
-
-document.getElementById("time").innerHTML = strDate;
-</script>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page">
+      <header class="section page-header">
+        <!--RD Navbar-->
+        <div class="rd-navbar-wrap rd-navbar-wrap-transparent">
+          <nav class="rd-navbar rd-navbar-classic rd-navbar-classic-transparent" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="125px" data-xl-stick-up-offset="125px" data-xxl-stick-up-offset="125px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-aside-outer bg-transparent rd-navbar-collapse context-dark container">
+              <div class="rd-navbar-aside row">
+                <div class="rd-navbar-brand">
+                  <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-164x61.png" alt="" width="82" height="30"/><img class="brand-logo-light" src="images/logo-inverse-164x61.png" alt="" width="82" height="30"/></a>
+                </div>
+                <div class="rd-navbar-text col-12 col-lg-4 inset-left-xl-34">
+                  <h6 class="font-weight-bold text-uppercase title">4578 Marmora<br> Road, Glasgow D04 89GR</h6>
+                  <h3 class="font-weight-bold subtitle"><a class="link-color-1" href="tel:#">800 2345-6789</a></h3>
+                </div>
+              </div>
+            </div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!--RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!--RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!--RD Navbar Brand-->
+                  <div class="rd-navbar-brand d-lg-none">
+                    <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-164x61.png" alt="" width="82" height="30"/><img class="brand-logo-light" src="images/logo-inverse-164x61.png" alt="" width="82" height="30"/></a>
+                  </div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="services.html">Services</a>
+                        <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Engine Repair</a>
+                          </li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Drivetrain Repair</a>
+                          </li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Transmission Repair</a>
+                          </li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Tire Repair</a>
+                          </li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Oil Change</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="news.html">News</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                      </li>
+					  
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!--Swiper-->
+      <section class="section swiper-container swiper-slider swiper-slider-1" data-loop="true" data-autoplay="5000" data-simulate-touch="false" data-direction="vertical">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide context-dark" data-slide-bg="images/slider-1-2050x1009.jpg">
+            <div class="container" style="height:100%">
+              <div class="row justify-content-xl-end" style="height:100%; align-items:center">
+                <div class="col-lg-12 col-xl-6 col-xxl-4 inset-left-xl-30 custom-offset-top-main text-center text-xl-left decorative-box-1" data-caption-animate="fadeIn" data-caption-delay="450">
+                  <div class="big-text position-relative">You can<br class='d-none d-lg-block'> entrust your<br class='d-none d-lg-block'> car to us</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide context-dark" data-slide-bg="images/slider-2-2050x1009.jpg">
+            <div class="container" style="height:100%">
+              <div class="row justify-content-xl-end" style="height:100%; align-items:center">
+                <div class="col-lg-12 col-xl-6 col-xxl-4 inset-left-xl-30 custom-offset-top-main text-center text-xl-left decorative-box-1" data-caption-animate="fadeIn" data-caption-delay="450">
+                  <div class="big-text position-relative">Fair & <br class='d-none d-lg-block'> friendly<br class='d-none d-lg-block'> service</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide context-dark" data-slide-bg="images/slider-3-2050x1009.jpg">
+            <div class="container" style="height:100%">
+              <div class="row justify-content-xl-end" style="height:100%; align-items:center">
+                <div class="col-lg-12 col-xl-6 col-xxl-4 inset-left-xl-30 custom-offset-top-main text-center text-xl-left decorative-box-1" data-caption-animate="fadeIn" data-caption-delay="450">
+                  <div class="big-text position-relative">Quality<br class='d-none d-lg-block'> car<br class='d-none d-lg-block'> maintenance</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Swiper Pagination-->
+        <div class="swiper-pagination swiper-pagination-custom"></div>
+      </section>
+      <!--Preventive Maintenance-->
+      <section class="section section-lg bg-gray-800 context-dark overflow-hidden">
+        <div class="container">
+          <div class="row row-70 text-center text-sm-left">
+            <div class="col-12 col-lg-8 inset-right-lg-30">
+              <div class="row row-30">
+                <div class="col-sm-6 box-nina wow fadeInLeft" data-wow-delay="0.1s">
+                  <div class="main-title"><span class="heading-2 text-uppercase d-block"> Drivetrain</span><span class="heading-2 text-uppercase text-primary d-block"> Repair</span></div><img src="images/box-nina-img-1-370x250.jpg" alt="" width="370" height="250"/>
+                  <p>We have been offering drivetrain repair services for cars and trucks since our inception. In more than 1,700 stores across America, our tire and auto service professionals provide top-notch car drivetrain repairs and services. The drivetrain spans the length of your vehicle, from the engine transmission and to the axles.</p>
+                </div>
+                <div class="col-sm-6 box-nina wow fadeInRight" data-wow-delay="0.4s">
+                  <div class="main-title"><span class="heading-2 text-uppercase d-block">Engine</span><span class="heading-2 text-uppercase text-primary d-block"> Repair</span></div><img src="images/box-nina-img-2-370x250.jpg" alt="" width="370" height="250"/>
+                  <p>Take care of your engine, and your car has a better chance of lasting for the long haul. If you stay on top of your engine maintenance and tend to any engine repairs immediately, your car or truck will last longer. With something as important as car engine repair, you can fully trust the experts at Car Repair.</p>
+                </div>
+                <div class="col-12 button-offset"><a class="button button-lg button-primary" href="#">read more</a></div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 last-section-lg decorative-box decorative-box-bg-1 inset-left-xl-30">
+              <div class="position-relative">
+                <div class="main-title"><span class="heading-2 text-uppercase d-block"> Preventive</span><span class="heading-2 text-uppercase d-block"> Maintenance</span>
+                  <p class="text-white">A well-maintained vehicle is more fuel efficient, more reliable, and will last longer, making the most of your auto investment. And your neighborhood Car Repair is the perfect car care partner. Our experts are trained to perform diagnostic and repair services on all makes and models, and we can take care of your factory recommended maintenance service as well. We have over 1,200 locations across the U.S. and Canada to provide car maintenance and car repair services wherever you are. We are always happy to help you, so feel free to contact us!</p>
+                </div><a class="button button-lg button-secondary custom-offset-top-lg-1 custom-offset-lg-left" href="#">read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Car Repair-->
+      <section class="section bg-gray-100 overflow-hidden">
+        <div class="container">
+          <div class="row row-70 text-center text-sm-left">
+            <div class="col-12 col-lg-8 section-lg inset-right-lg-30">
+              <div class="main-title"><span class="heading-2 text-uppercase d-block"> Car Repair can handle all</span><span class="heading-2 text-uppercase d-block"> of your auto repair services</span><span class="heading-2 text-uppercase d-block"> including:</span></div>
+              <div class="row offset-custom">
+                <div class="col-sm-6 wow fadeInLeft" data-wow-delay="0.1s">
+                  <ul class="list-main">
+                    <li class="heading-6 ls-0 text-uppercase"><a class="link-color-2" href="#">Computer Diagnostics</a></li>
+                    <li class="heading-6 ls-0 text-uppercase"><a class="link-color-2" href="#">Complete Safety Analysis</a></li>
+                    <li class="heading-6 ls-0 text-uppercase"><a class="link-color-2" href="#">Drivability Problems</a></li>
+                    <li class="heading-6 ls-0 text-uppercase"><a class="link-color-2" href="#">Tune-ups</a></li>
+                    <li class="heading-6 ls-0 text-uppercase"><a class="link-color-2" href="#">Oil Changes</a></li>
+                    <li class="heading-6 ls-0 text-uppercase"><a class="link-color-2" href="#">Tires</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6 wow fadeInRight" data-wow-delay="0.4s">
+                  <ul class="list-main">
+                    <li class="heading-6 ls-0 text-uppercase"><a class="link-color-2" href="#">Brake repair specialists</a></li>
+                    <li class="heading-6 ls-0 text-uppercase"><a class="link-color-2" href="#">Exhaust Systems</a></li>
+                    <li class="heading-6 ls-0 text-uppercase"><a class="link-color-2" href="#">Steering and Suspensions</a></li>
+                    <li class="heading-6 ls-0 text-uppercase"><a class="link-color-2" href="#">Alignments</a></li>
+                    <li class="heading-6 ls-0 text-uppercase"><a class="link-color-2" href="#">Fuel System Services</a></li>
+                    <li class="heading-6 ls-0 text-uppercase"><a class="link-color-2" href="#">Coolant Systems</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="row no-gutters">
+                <div class="col-12 decorative-box-secondary decorative-box-secondary-bg-1">
+                  <div class="box-buba"><span class="icon fa fa-truck icon-xl text-primary"></span><a class="main-title link-main-title" href="#"><span class="heading-2 text-uppercase d-block"> Auto</span><span class="heading-2 text-uppercase d-block"> Towing</span></a></div>
+                </div>
+                <div class="col-12 decorative-box-secondary decorative-box-secondary-bg-2">
+                  <div class="box-buba"><span class="icon fa fa-wrench icon-xl text-primary"></span><a class="main-title link-main-title" href="#"><span class="heading-2 text-uppercase d-block"> Auto</span><span class="heading-2 text-uppercase d-block"> Repair</span></a></div>
+                </div>
+                <div class="col-12 decorative-box-secondary decorative-box-secondary-bg-3">
+                  <div class="box-buba"><span class="icon fa fa-lock icon-xl text-primary"></span><a class="main-title link-main-title" href="#"><span class="heading-2 text-uppercase d-block"> Auto</span><span class="heading-2 text-uppercase d-block"> Storage</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--COMPLETE AUTO SERVICE-->
+      <section class="parallax-container" data-parallax-img="images/bg-image-2050x1395.jpg">
+        <div class="parallax-content section section-lg context-dark overlay-1">
+          <div class="container">
+            <div class="row text-center text-sm-left">
+              <div class="col-12 col-lg-8"></div>
+              <div class="col-12 col-xl-4 last-section-xl decorative-box-1-1 inset-left-xl-30 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="position-relative">
+                  <div class="big-text">Complete<br class='d-none d-lg-block'>auto <br class='d-none d-lg-block'> service</div>
+                  <p class="text-white">Since 1999, drivers have trusted Car Repair to keep their vehicles running well. As America’s auto care needs have grown and changed, so have we. We’re the leading provider of maintenance and repairs for a reason: because we believe in offering a total auto care experience that perfectly meets your needs. Our auto care advisors and service technicians take pride in understanding your vehicle from bumper to bumper. We back our services and repairs with a nationwide warranty that’s available at more than 1,000 of our locations.</p><a class="button button-lg button-primary custom-offset-top-xl-2 custom-offset-xl-left" href="#">read more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Contact-->
+      <section class="section overflow-hidden wow fadeInUp">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-8 position-relative">
+              <div class="google-map-container"><iframe src="https://www.amap.com/" width="100%" height="100%" frameborder="0" style="border:0" sandbox=""></iframe></div>
+            </div>
+            <div class="col-12 col-lg-4 decorative-box decorative-box-bg-1 section-lg-2">
+              <div class="position-relative inset-left-lg-30">
+                <div class="big-text-2"><a class="link-color-3" href="tel:#">800 2345-6789</a></div>
+                <h5 class="text-uppercase text-white">4578 Marmora Road,<br class='d-none d-lg-block'> Glasgow D04 89GR</h5>
+                <p class="text-gray-800 block-1">Feel free to contact us using the phone above or visit our office personally if you have any issue with your vehicle.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Footer Top-->
+      <section class="section section-md bg-gray-800 overflow-hidden">
+        <div class="container">
+          <div class="row row-100 text-center text-sm-left">
+            <div class="col-12 col-lg-8">
+              <div class="row row-40">
+                <div class="col-sm-6 wow fadeInLeft" data-wow-delay="0.1s">
+                  <h5 class="text-uppercase">Information</h5>
+                  <ul class="page-list">
+                    <li><a class="link-color-4" href="#">About Us</a></li>
+                    <li><a class="link-color-4" href="#">Our Team</a></li>
+                    <li><a class="link-color-4" href="#">History</a></li>
+                    <li><a class="link-color-4" href="#">Services</a></li>
+                    <li><a class="link-color-4" href="#">News</a></li>
+                    <li><a class="link-color-4" href="#">Testimonials</a></li>
+                    <li><a class="link-color-4" href="#">Our Clients</a></li>
+                    <li><a class="link-color-4" href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-6 wow fadeInRight" data-wow-delay="0.4s">
+                  <h5 class="text-uppercase">Services</h5>
+                  <ul class="page-list">
+                    <li><a class="link-color-4" href="#">Repair Services</a></li>
+                    <li><a class="link-color-4" href="#">Car Maintenance</a></li>
+                    <li><a class="link-color-4" href="#">Drivetrain Repair</a></li>
+                    <li><a class="link-color-4" href="#">Engine Repair</a></li>
+                    <li><a class="link-color-4" href="#">Oil Change</a></li>
+                    <li><a class="link-color-4" href="#">Tune-up Services</a></li>
+                    <li><a class="link-color-4" href="#">Tire Repair</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 decorative-box decorative-box-bg-3 custom-offset-top-lg-3">
+              <div class="position-relative inset-left-lg-12">
+                <h4 class="text-uppercase">Follow Us</h4>
+                <ul class="list-social wow fadeInRight">
+                  <li><a href="#"><span class="icon fa fa-facebook text-white icon-sm"></span></a></li>
+                  <li><a href="#"><span class="icon fa fa-twitter text-white icon-sm"></span></a></li>
+                  <li><a href="#"><span class="icon fa fa-instagram text-white icon-sm"></span></a></li>
+                </ul>
+                <p class="small-text block-1 block-center-sm">For 20 years, residents throughout the local area have turned to us for all of their automotive repair needs. With free estimates and fast turnaround, we are known for our personal service and expertise in all forms of specialized engine repair and maintenance. Our team of auto mechanics uses the latest and most modern diagnostic technology to have you back in your car and out on the road safely and quickly, no matter the make and model of your vehicle.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="section footer-classic context-dark">
+        <div class="container wow fadeInLeft">
+          <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Car Repair</span><span>.&nbsp;</span><a class="link-color-1" href="privacy-policy.html">Privacy Policy</a> <a target="_blank" href="https://www.mobanwang.com/" title="网站模板" class="link-color-1">网站模板</a></p>
+        </div>
+      </footer>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
