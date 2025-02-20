@@ -1,0 +1,199 @@
+<!-- Inquiry Form Modal Styles -->
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 5% auto;
+        padding: 20px;
+        width: 80%;
+        max-width: 800px;
+        border-radius: 0;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .close {
+        color: #666;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: -10px -10px 0 0;
+    }
+
+    .close:hover {
+        color: #333;
+    }
+
+    .inquiry-form {
+        margin-top: 20px;
+    }
+
+    .inquiry-form h2 {
+        color: #666;
+        font-size: 1.5em;
+        padding-bottom: 3px;
+        text-transform: uppercase;
+    }
+
+    .inquiry-form div {
+        margin-bottom: 15px;
+    }
+
+    .inquiry-form label {
+        display: block;
+        color: #666;
+        font-size: 0.95em;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    .inquiry-form input[type="text"],
+    .inquiry-form input[type="email"],
+    .inquiry-form input[type="tel"] {
+        width: 96%;
+        padding: 10px;
+        margin: 0;
+        border: 1px solid #E1E1E1;
+        color: #666;
+        background: #FFF;
+        outline: none;
+        font: normal 12px/15px Arial, Helvetica, sans-serif;
+    }
+
+    .inquiry-form input[type="text"]:focus,
+    .inquiry-form input[type="email"]:focus,
+    .inquiry-form input[type="tel"]:focus {
+        border-color: #999;
+    }
+
+    .inquiry-form button {
+        background: #0262AD;
+        color: #FFF;
+        text-transform: uppercase;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+        margin-top: 10px;
+        font-family: 'Fauna One', serif;
+    }
+
+    .inquiry-form button:hover {
+        background: #333;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .modal-content {
+            width: 95%;
+            margin: 10% auto;
+        }
+        
+        .inquiry-form input[type="text"],
+        .inquiry-form input[type="email"],
+        .inquiry-form input[type="tel"] {
+            width: 94%;
+        }
+    }
+</style>
+
+<!-- Inquiry Form Modal HTML -->
+<div id="inquiryModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="inquiry-form">
+            <h2>Contact Us</h2>
+            <form id="inquiryForm">
+                <input type="hidden" id="productName" name="productName">
+                <div>
+                    <label for="name">NAME</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">E-MAIL</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="mobile">MOBILE NO</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+                <div>
+                    <label for="subject">SUBJECT</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+// Modal functionality
+function initInquiryForm() {
+    var modal = document.getElementById("inquiryModal");
+    var span = document.getElementsByClassName("close")[0];
+    var form = document.getElementById("inquiryForm");
+
+    // Close modal when clicking (x)
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Handle form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const mobile = document.getElementById('mobile').value;
+        const subject = document.getElementById('subject').value;
+        
+        // Create email body
+        const emailBody = `
+Name: ${name}
+Email: ${email}
+Mobile: ${mobile}
+Subject: ${subject}
+
+Inquiry Details:
+I would like to inquire about ${subject}.
+        `;
+        
+        // Create mailto link
+        const mailtoLink = `mailto:wbdyxinzhj@gmail.com?subject=Product Inquiry: ${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
+        // Close modal and reset form
+        modal.style.display = "none";
+        form.reset();
+    });
+}
+
+// Function to open modal
+function openInquiryModal(productName) {
+    var modal = document.getElementById("inquiryModal");
+    modal.style.display = "block";
+}
+
+// Initialize form
+initInquiryForm();
+</script> 
